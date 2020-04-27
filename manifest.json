@@ -25,7 +25,8 @@
         "contentscript.css"
       ],
       "matches": [
-        "https://*.netflix.com/browse/*"
+        "https://*.netflix.com/browse/*",
+        "https://*.netflix.com/title/*"
       ]
     }
   ],
