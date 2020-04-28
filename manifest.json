@@ -27,6 +27,9 @@
       "matches": [
         "https://*.netflix.com/browse/*",
         "https://*.netflix.com/title/*"
+      ],
+      "exclude_globs": [
+        "https://*.netflix.com/watch/*"
       ]
     }
   ],

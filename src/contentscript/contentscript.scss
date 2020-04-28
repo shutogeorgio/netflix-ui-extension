@@ -1,7 +1,7 @@
-div {
-  color: white;
-  background: black;
+.static-imgage {
+  display: none;
 }
+
 img.boxart-image  {
   display: none;
 }
@@ -10,4 +10,24 @@ img.boxart-image  {
 }
 .spotlight-background-fill {
   display: none;
+}
+.title .logo {
+  display: none;
+}
+.VideoContainer video {
+  display: none;
+}
+.video-component-container {
+  content: "Video";
+  border: 1px white solid;
+}
+.billboard-title {
+  img.title-logo {
+    display: none;
+  }
+}
+.billboard-title:before {
+  content: "Netflix";
+  display: block;
+  font-size: 1.7vw;
 }

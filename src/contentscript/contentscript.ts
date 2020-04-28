@@ -1,8 +1,11 @@
 import './contentscript.scss';
 
-const isThisContentscript = true;
+const isThisContentscript: boolean = true;
 console.log('isThisContentscript', isThisContentscript);
 
 const thumbnail_mods = (): void => {
-  // REPLACE NOIMAGE
+  let setTarget: NodeList = document.querySelectorAll(".list-items");
+  if (!setTarget) return;
 }
+
+thumbnail_mods();

@@ -1,2 +1,2 @@
-const isThisBackground = true;
+const isThisBackground: boolean = true;
 console.log('isThisBackground', isThisBackground);

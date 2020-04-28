@@ -1,1 +1,4 @@
-<h1 align="center">Chrome Extension with React and Typescript Template Pack</h1>
+# Chrome Extension For Netflix UI which make thumbail and title gone 
+## Usage 
+Unpack this module and upload in extension page
+
