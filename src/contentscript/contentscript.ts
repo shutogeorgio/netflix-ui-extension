@@ -21,7 +21,9 @@ function thumbnail_mods(moduleObj: configTargets) {
 
 let variablesObj = {
   actors: ".list-items",
-  titles: ".fallback-text"
+  titles: "p.fallback-text"
 }
 
-thumbnail_mods(variablesObj);
+window.addEventListener("load", (e) => {
+  thumbnail_mods(variablesObj);
+});

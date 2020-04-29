@@ -7,6 +7,8 @@ img.boxart-image  {
 }
 .boxart-container {
   border: 1px solid white;
+  display: flex;
+  flex-direction: column;
 }
 .spotlight-background-fill {
   display: none;
@@ -30,4 +32,13 @@ img.boxart-image  {
   content: "Netflix";
   display: block;
   font-size: 1.7vw;
+}
+.alternate_title {
+  display: flex;
+  margin: 0 auto;
+  font-size: 1.0vw;
+  text-align: center; 
+}
+.fallback-text-container {
+  background-color: white;
 }
