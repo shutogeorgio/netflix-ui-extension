@@ -1,13 +1,61 @@
-div {
-  color: white;
-  background: black;
-}
-img.boxart-image  {
-  display: none;
-}
+/* thumbanil */
 .boxart-container {
   border: 1px solid white;
+  display: flex;
+  flex-direction: column;
 }
+
+.fallback-text {
+  display: none;
+}
+
+.video-title {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 0;
+  left: 8%;
+  right: 8%;
+  margin: 0;
+  padding: 0 0 10%;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
+
+/* background image */
+.static-imgage {
+  display: none;
+}
+
 .spotlight-background-fill {
   display: none;
+}
+.title .logo {
+  display: none;
+}
+.video-component-container {
+  content: "Video";
+  border: 1px white solid;
+}
+.billboard-title {
+  img.title-logo {
+    display: none;
+  }
+}
+.billboard-title:before {
+  content: "Unknown";
+  display: block;
+  font-size: 1.7vw;
+}
+.alternate_title {
+  display: flex;
+  margin: 0 auto;
+  font-size: 1.0vw;
+  text-align: center; 
 }
