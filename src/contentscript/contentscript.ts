@@ -1,37 +1,25 @@
 import './contentscript.scss';
-import { configTargets } from './variables';
+import { thumbnail_mods, replaceBackgroundFunc, replaceImgFunc } from './functions';
 
 const isThisContentscript: boolean = true;
 console.log('isThisContentscript', isThisContentscript);
 
-function thumbnail_mods(moduleObj: configTargets) {
-  let setTargets = document.querySelectorAll(moduleObj.actors);
-  var setTitles = document.querySelectorAll(moduleObj.titles);
-
-  if (!setTargets) return;
-  setTargets.forEach(function (setTarget) {
-    setTarget.textContent = "Secret";
-  })
-
-  if (!setTitles) return;
-  setTitles.forEach(function (setTitle) {
-    setTitle.textContent = "Title";
-  })
-}
-
-function replaceBackgroundFunc(className: string, content: string) {
-  var items = document.querySelectorAll(className);
-  items.forEach(function (item: HTMLInputElement) {
-    item.style.background = content;
-  });
-}
-
 let variablesObj = {
   actors: ".list-items",
-  titles: "p.fallback-text"
+  titles: ".fallback-text-container",
+  headings: ".logo"
 }
 
 window.addEventListener("load", (e) => {
   thumbnail_mods(variablesObj);
   replaceBackgroundFunc('.title-boxart', '#000');
+  replaceImgFunc('img.boxart-image', 'https://assets.brand.microsites.netflix.io/assets/493f5bba-81a4-11e9-bf79-066b49664af6_cm_1440w.png');
+});
+
+window.addEventListener("scroll", (e) => {
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    thumbnail_mods(variablesObj);
+    replaceBackgroundFunc('.title-boxart', '#000');
+    replaceImgFunc('img.boxart-image', 'https://assets.brand.microsites.netflix.io/assets/493f5bba-81a4-11e9-bf79-066b49664af6_cm_1440w.png');
+  }
 });

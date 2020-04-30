@@ -19,7 +19,6 @@
   },
   "include": [
     "src/background",
-    "src/contentscript",
-    "src/variables"
+    "src/contentscript"
   ]
 }
