@@ -19,6 +19,13 @@ function thumbnail_mods(moduleObj: configTargets) {
   })
 }
 
+function replaceBackgroundFunc(className: string, content: string) {
+  var items = document.querySelectorAll(className);
+  items.forEach(function (item: HTMLInputElement) {
+    item.style.background = content;
+  });
+}
+
 let variablesObj = {
   actors: ".list-items",
   titles: "p.fallback-text"
@@ -26,4 +33,5 @@ let variablesObj = {
 
 window.addEventListener("load", (e) => {
   thumbnail_mods(variablesObj);
+  replaceBackgroundFunc('.title-boxart', '#000');
 });
