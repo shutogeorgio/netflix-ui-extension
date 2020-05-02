@@ -52,3 +52,10 @@ export function dynamicDisplayFunc(className: string, content: string) {
     item.style.display = content;
   });
 }
+
+export function replaceBgImgFunc(className: string, content: string) {
+  let items = document.querySelectorAll(className);
+  items.forEach(function (item: HTMLInputElement) {
+    item.style.backgroundImage = `url(${content})`;
+  });
+}
