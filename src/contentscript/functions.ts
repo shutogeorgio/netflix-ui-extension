@@ -2,36 +2,60 @@ import { configTargets } from './interface';
 
 export function thumbnail_mods(moduleObj: configTargets) {
   let setTargets = document.querySelectorAll(moduleObj.actors);
-  let setTitles = document.querySelectorAll(moduleObj.titles);
   let setHeadings = document.querySelectorAll(moduleObj.headings);
+  let titleObj = [];
 
-  if (!setTargets) return;
-  setTargets.forEach(function (setTarget) {
-    setTarget.textContent = "XXX";
-  })
+  if (setTargets) {
+    setTargets.forEach(setTarget => {
+      setTarget.textContent = "XXX";
+    })
+  }
 
-  if (!setTitles) return;
-  setTitles.forEach(function (setTitle) {
-    setTitle.innerHTML = "<h4 class='video-title'>Title</h4>";
-  })
+
+  moduleObj.titles.forEach(title => {
+    let titleNodes = document.querySelectorAll(title);
+    titleNodes.forEach(target => {
+      titleObj.push(target);
+    })
+  });
+
+  if (titleObj) {
+    titleObj.forEach(setTitle => {
+      setTitle.innerHTML = "<h4 class='video-title'>Imagine Title Please</h4>";
+    })
+  }
 
   if (setHeadings) {
-    setHeadings.forEach(function (setHeading) {
-      setHeading.textContent = "Unknown";
+    setHeadings.forEach(setHeading => {
+      setHeading.textContent = "";
     });
   }
 }
 
 export function replaceBackgroundFunc(className: string, content: string) {
-  var items = document.querySelectorAll(className);
+  let items = document.querySelectorAll(className);
   items.forEach(function (item: HTMLInputElement) {
     item.style.background = content;
   });
 }
 
 export function replaceImgFunc(className: string, content: string) {
-  var items = document.querySelectorAll(className);
+  let items = document.querySelectorAll(className);
   items.forEach(function (item: HTMLInputElement) {
     item.src = content;
+  });
+}
+
+export function dynamicDisplayFunc(className: string, content: string) {
+  let items = document.querySelectorAll(className);
+  items.forEach(function (item: HTMLInputElement) {
+    item.style.display = content;
+  });
+}
+
+export function replaceBgImgFunc(className: string, content: string) {
+  let items = document.querySelectorAll(className);
+  items.forEach(function (item: HTMLInputElement) {
+    item.style.backgroundImage = `url(${content})`;
   });
 }
