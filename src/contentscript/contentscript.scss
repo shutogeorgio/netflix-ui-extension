@@ -10,22 +10,7 @@
 }
 
 .video-title {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  position: absolute;
-  bottom: 0;
-  left: 8%;
-  right: 8%;
-  margin: 0;
-  padding: 0 0 10%;
-  text-align: center;
-  font-size: 1.5em;
-  font-weight: bold;
-  white-space: nowrap;
-  overflow: hidden;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  display: flex;
 }
 
 /* background image */
@@ -39,17 +24,14 @@
 .title .logo {
   display: none;
 }
-.video-component-container {
-  content: "Video";
-  border: 1px white solid;
-}
 .billboard-title {
   img.title-logo {
     display: none;
   }
+  
 }
 .billboard-title:before {
-  content: "Unknown";
+  content: "Watch Me";
   display: block;
   font-size: 1.7vw;
 }
@@ -58,4 +40,10 @@
   margin: 0 auto;
   font-size: 1.0vw;
   text-align: center; 
+}
+
+/* video alternatives */
+.video-component-container {
+  content: "Video";
+  border: 1px white solid;
 }
