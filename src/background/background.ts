@@ -1,2 +1,2 @@
 const isThisBackground: boolean = true;
-console.log('isThisBackground', isThisBackground);
+console.log(isThisBackground);
