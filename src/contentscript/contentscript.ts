@@ -13,7 +13,6 @@ async function main(): Promise<void> {
       replaceAll();
     }
   });
-
   targets.forEach(target => {
     target.addEventListener('onclick', () => replaceAll());
   });

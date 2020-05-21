@@ -10,9 +10,6 @@ let variablesObj = {
   headings: '.logo',
 };
 
-let targets = document.querySelectorAll('.handle');
-let counter = 0;
-
 export function replaceAll(): void {
   thumbnail_mods(variablesObj);
   replaceBackgroundFunc('.title-boxart', '#000');
